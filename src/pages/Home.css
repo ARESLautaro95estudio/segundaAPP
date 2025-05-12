@@ -1,0 +1,66 @@
+/* pages/Home.css */
+.full-height-grid {
+  height: calc(100% - 60px);
+}
+
+.full-height-row {
+  height: 100%;
+}
+
+.big-button {
+  height: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  --border-radius: 8px;
+  text-transform: uppercase;
+}
+
+/* Estilos para los botones temáticos */
+.color-button {
+  --background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+  --color: white;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.number-button {
+  --background: linear-gradient(45deg, #ffa500, #ff6347);
+  --color: white;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animal-button {
+  --background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  --color: white;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fruit-button {
+  --background: linear-gradient(45deg, #FF5722, #FF9800);
+  --color: white;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-button {
+  --background: linear-gradient(45deg, #2196F3, #03A9F4);
+  --color: white;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para responsividad */
+@media (orientation: landscape) {
+  .full-height-grid {
+    height: calc(100% - 40px);
+  }
+  
+  ion-row {
+    flex-wrap: nowrap;
+  }
+  
+  ion-col {
+    min-height: 100%;
+  }
+}

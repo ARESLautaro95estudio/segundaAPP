@@ -1,4 +1,3 @@
-// En cada App.tsx, reemplaza el contenido con este código:
 import React, { useState, useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
@@ -21,7 +20,11 @@ import './theme/variables.css';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import Colors from './pages/Colors';
+import Numbers from './pages/Numbers';
+import Animals from './pages/Animals';
 import { AuthProvider } from './contexts/AuthContext';
+import { SettingsProvider } from './contexts/SettingsContext';
 import PrivateRoute from './components/PrivateRoute';
 import AnimatedSplash from './components/AnimatedSplash';
 import { SplashScreen } from '@capacitor/splash-screen';
@@ -46,16 +49,21 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <AuthProvider>
-        <IonReactRouter>
-          <IonRouterOutlet>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <PrivateRoute exact path="/home" component={Home} />
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-          </IonRouterOutlet>
-        </IonReactRouter>
+        <SettingsProvider>
+          <IonReactRouter>
+            <IonRouterOutlet>
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <PrivateRoute exact path="/home" component={Home} />
+              <PrivateRoute exact path="/colors" component={Colors} />
+              <PrivateRoute exact path="/numbers" component={Numbers} />
+              <PrivateRoute exact path="/animals" component={Animals} />
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+            </IonRouterOutlet>
+          </IonReactRouter>
+        </SettingsProvider>
       </AuthProvider>
     </IonApp>
   );

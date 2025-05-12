@@ -1,0 +1,60 @@
+/* pages/Numbers.css */
+.full-height-grid {
+  height: calc(100% - 20px);
+}
+
+.full-height-row {
+  height: 100%;
+}
+
+.number-button {
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  --border-radius: 8px;
+  --color: white;
+  text-transform: uppercase;
+  --padding-start: 20px;
+  --padding-end: 20px;
+}
+
+.number-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.number-value {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.number-name {
+  font-size: 2rem;
+}
+
+.volume-icon {
+  margin-left: 20px;
+}
+
+/* Ajustes para responsividad */
+@media (orientation: landscape) {
+  .full-height-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ion-col {
+    height: 100%;
+    flex: 1;
+  }
+  
+  .number-content {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

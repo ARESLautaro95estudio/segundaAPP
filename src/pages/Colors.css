@@ -1,0 +1,33 @@
+/* pages/Colors.css */
+.full-height-grid {
+  height: calc(100% - 20px);
+}
+
+.full-height-row {
+  height: 100%;
+}
+
+.color-button {
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  --border-radius: 8px;
+  text-transform: uppercase;
+}
+
+/* Ajustes para responsividad */
+@media (orientation: landscape) {
+  .full-height-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ion-col {
+    height: 100%;
+    flex: 1;
+  }
+}
